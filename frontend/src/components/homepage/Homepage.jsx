@@ -7,6 +7,7 @@ function Homepage() {
   // const [data,setData] = useState([]);
 
 const {user} = useContext(AuthContext);
+console.log("user",user);
 
   return (
     <div className='homepage'>
