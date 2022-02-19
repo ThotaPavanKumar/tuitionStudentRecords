@@ -19,8 +19,8 @@ router.get("/", async (req,res) => {
     try {
 
         const student = await Student.find()
-        .populate({path:"teacher"})
-        .populate({path:"test"})
+        .populate({path:"teacher_id"})
+        .populate({path:"test_id"})
         .lean().exec();
         res.status(201).send({student});
 

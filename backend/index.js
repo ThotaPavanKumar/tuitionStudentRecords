@@ -1,8 +1,11 @@
 
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const studentController = require("./src/controllers/student.controller");
 const teacherController = require("./src/controllers/teacher.controller");
