@@ -5,12 +5,15 @@ import Homepage from './components/homepage/Homepage';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import Detailspage from './components/detailspage/Detailspage';
+import { useContext } from 'react';
+import { AuthContext } from './components/context/AuthContext';
 
 function App() {
+  const {user} = useContext(AuthContext);
   return (
     <div className="App">
      <Routes>
-       <Route path='/' element={<Homepage/>}/>
+       <Route path='/' element={user ? <Homepage /> : <Login />}/>
        <Route path='/login' element={<Login/>}/>
        <Route path='/register' element={<Register/>}/>
        <Route path='/detailspage' element={<Detailspage/>}/>
