@@ -12,6 +12,7 @@ console.log("user",user);
   return (
     <div className='homepage'>
       <Navbar />
+      <div className='nav'></div>
     Homepage</div>
   )
 }
